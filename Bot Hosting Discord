@@ -1,0 +1,30 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('pong');
+  }
+});
+client.login("NzIwOTcwMTAwMjczODQwMTg5.XuNt0Q.RCopwyo6eXZ3XYZ1FjkCB-vmWxI");
+client.on('message', message => {
+	if (message.content === '!commands') {
+		message.channel.send('Commands List: !help, !apply');
+	}
+});
+client.login("NzIwOTcwMTAwMjczODQwMTg5.XuNt0Q.RCopwyo6eXZ3XYZ1FjkCB-vmWxI");
+client.on('message', message => {
+	if (message.content === '!help') {
+		message.channel.send('For help @ one of our Discord Managers.');
+	}
+});
+client.login("NzIwOTcwMTAwMjczODQwMTg5.XuNt0Q.RCopwyo6eXZ3XYZ1FjkCB-vmWxI");
+client.on('message', message => {
+	if (message.content === '!apply') {
+		message.channel.send('Apply By Typing %apply');
+	}
+});
